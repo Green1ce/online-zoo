@@ -1,0 +1,824 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-style: 400;
+  color: #000000;
+}
+
+.wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* -------------------------------------------
+--------------------HEADER--------------------
+------------------------------------------- */
+
+.header__wrapper{
+  width: 1920px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(71.89% 152.21% at 40.1% 50%, #B5E6FF 0%, #59C3FB 100%);
+}
+
+.header{
+  width: 1160px;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 5;
+}
+
+.header-logo{
+  width: 112px;
+  height: 57px;
+  background-image: url(../assets/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.header__nav{
+  width: 410px;
+  height: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin-left: 55px;
+}
+
+.header-burger{
+  width: 40px;
+  height: 40px;
+  display: none;
+  background-image: url(../assets/burger-logo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.header__link{
+  font-size: 18px;
+  line-height: 120%;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.about{
+  text-shadow: #70cb0e 0 0 2px;
+  cursor: default;
+}
+
+.h1{
+  font-size: 0px;
+  opacity: 0;
+}
+
+/* -------------------------------------------
+---------------------MAP----------------------
+------------------------------------------- */
+
+.map__wrapper{
+  width: 1920px;
+  height: 785px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: radial-gradient(71.89% 152.21% at 40.1% 50%, #B5E6FF 0%, #59C3FB 100%);
+}
+
+.map__animals{
+  width: 1160px;
+  position: absolute;
+  z-index: 0;
+}
+
+.map__list{
+  width: 1160px;
+  height: 745px;
+  position: absolute;
+  list-style-type: none;
+  z-index: 0;
+}
+
+.map-card{
+  height: 62px;
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  z-index: 2;
+}
+
+.map-card-link{
+  width: 62px;
+  height: 62px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.map-card-name{
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+  display: flex;
+  position: relative;
+  cursor: default;
+  margin-left: 8px;
+}
+
+.map-card-tooltip{
+  width: 120px;
+  height: 47px;
+  display: none;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.map-card-tooltip-link{
+  width: 147px;
+  height: 40px;
+  display: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 53px 0 0 20px;
+}
+
+.map-card:hover .map-card-link{
+  border: 3px solid #70cb0e;
+}
+
+.map-card:hover .map-card-name{
+  display: none;
+}
+
+.map-card:hover .map-card-tooltip{
+  display: flex;
+}
+
+.eagle-nav{
+  top: 440px;
+  left: 100px;
+}
+
+.map-eagle{
+  background-image: url(../assets/map-eagle.png);
+}
+
+.tooltip-eagle{
+  background-image: url(../assets/tooltip-eagle.png);
+}
+
+.alligator-nav{
+  top: 405px;
+  left: 300px;
+}
+
+.map-alligator{
+  background-image: url(../assets/map-alligator.png);
+}
+
+.tooltip-alligator{
+  background-image: url(../assets/tooltip-alligator.png);
+}
+
+.gorilla-nav{
+  top: 505px;
+  left: 655px;
+}
+
+.map-gorilla{
+  background-image: url(../assets/map-gorilla.png);
+}
+
+.tooltip-gorilla{
+  background-image: url(../assets/tooltip-gorilla.png);
+}
+
+.panda-nav{
+  top: 405px;
+  left: 920px;
+}
+
+.map-panda{
+  background-image: url(../assets/map-panda.png);
+}
+
+.tooltip-panda{
+  background-image: url(../assets/tooltip-panda.png);
+}
+
+.map-country{
+  position: absolute;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  z-index: 1;
+}
+
+.usa-nav{
+  top: 380px;
+  left: 200px;
+}
+
+.eastern-drc-nav{
+  top: 525px;
+  left: 510px;
+}
+
+.china-nav{
+  top: 395px;
+  left: 830px;
+}
+
+.map-zoom{
+  width: 32px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  border-radius: 6px;
+  top: 525px;
+  left: calc(100% - 52px);
+  z-index: 0;
+  margin-bottom: 100px;
+}
+
+.map-zoom__in,
+.map-zoom__out{
+  width: 32px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 6px;
+  background-image: url(../assets/map-zoom.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  cursor: pointer;
+}
+
+.map-zoom__in{
+  background-position: bottom center;
+}
+
+/* -------------------------------------------
+--------------------FOOTER--------------------
+------------------------------------------- */
+
+.footer__wrapper{
+  width: 1920px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #dff5b0;
+}
+
+.footer{
+  width: 1160px;
+  height: 100%;
+  z-index: 1;
+}
+
+.footer-logo{
+  width: 112px;
+  height: 57px;
+  background-image: url(../assets/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.footer-top,
+.footer-bottom{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 65px;
+}
+
+.footer-bottom{
+  align-items: flex-end;
+}
+
+.footer__button-main{
+  width: 230px;
+  height: 50px;
+  display: block;
+  background: #70cb0e;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.footer__button-640{
+  width: 205px;
+  height: 50px;
+  display: none;
+  background: #70cb0e;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.footer__button-320{
+  width: 205px;
+  height: 50px;
+  display: none;
+  background: #70cb0e;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.footer__about-map,
+.footer__contact-us-feedback{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  list-style-type: none;
+}
+
+.footer__media{
+  width: 190px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.footer__link{
+  font-size: 18px;
+  line-height: 120%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.instagram,
+.facebook,
+.twitter,
+.youtube{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.instagram{
+  background-image: url(../assets/instagram.svg);
+}
+
+.facebook{
+  background-image: url(../assets/facebook.svg);
+}
+
+.twitter{
+  background-image: url(../assets/twitter.svg);
+}
+
+.youtube{
+  background-image: url(../assets/youtube.svg);
+}
+
+.footer-logos{
+  width: 295px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.rss-logo{
+  display: flex;
+  width: 141px;
+  height: 50px;
+  background-image: url(../assets/rss-logo.svg);
+}
+
+.yd-logo{
+  display: flex;
+  width: 97px;
+  height: 50px;
+  background-image: url(../assets/yd-logo.svg);
+}
+
+.copyright-main,
+.student-main,
+.copyright-bonus,
+.student-bonus{
+  font-size: 18px;
+  line-height: 120%;
+  cursor: default;
+  display: inline;
+}
+
+.footer-copyright-640{
+  width: 100%;
+  height: 50px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.footer-copyright-320{
+  width: 100%;
+  height: 73px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-background-img{
+  width: 1920px;
+  height: 330px;
+  position: relative;
+  top: -312px;
+  z-index: 0;
+}
+
+/* -------------------MEDIA------------------------
+---------------------------------------------------
+---------------------1200-1920------------------ */
+
+@media (min-width: 1200px) and (max-width: 1920px) {
+
+  .header__wrapper,
+  .map__wrapper,
+  .footer__wrapper{
+    width: 100%;
+  }
+}
+
+/* -------------------MEDIA------------------------
+---------------------------------------------------
+---------------------640-1200------------------- */
+
+@media (min-width: 640px) and (max-width: 1200px) {
+
+  /* -------------------------------------------
+  --------------------HEADER--------------------
+  ------------------------------------------- */
+
+  .header__wrapper,
+  .header{
+    width: 100%;
+  }
+
+  .header-logo{
+    margin-left: 20px;
+  }
+
+  .header__nav{
+    margin-left: 50px;
+  }
+
+  /* -------------------------------------------
+  ---------------------MAP----------------------
+  ------------------------------------------- */
+
+  .map__wrapper{
+    width: 100%;
+    height: 800px;
+  }
+  
+  .map__animals,
+  .map__list{
+    width: 933px;
+    height: 600px;
+  }
+  
+  .map-card-tooltip{
+    width: 178px;
+    height: 100px;
+  }
+
+  .map-card-tooltip-link{
+    display: block;
+  }
+  
+  .eagle-nav{
+    top: 340px;
+    left: 60px;
+  }
+  
+  .tooltip-eagle{
+    background-image: url(../assets/tooltip-eagle-640.png);
+  }
+  
+  .alligator-nav{
+    top: 315px;
+    left: 250px;
+  }
+  
+  .tooltip-alligator{
+    background-image: url(../assets/tooltip-alligator-640.png);
+  }
+  
+  .gorilla-nav{
+    top: 395px;
+    left: 525px;
+  }
+
+  .tooltip-gorilla{
+    background-image: url(../assets/tooltip-gorilla-640.png);
+  }
+  
+  .panda-nav{
+    top: 305px;
+    left: 745px;
+  }
+  
+  .tooltip-panda{
+    background-image: url(../assets/tooltip-panda-640.png);
+  }
+  
+  .usa-nav{
+    top: 300px;
+    left: 165px;
+  }
+  
+  .eastern-drc-nav{
+    top: 425px;
+    left: 390px;
+  }
+  
+  .china-nav{
+    top: 315px;
+    left: 655px;
+  }
+
+  /* -------------------------------------------
+  --------------------FOOTER--------------------
+  ------------------------------------------- */
+
+  .footer__wrapper{
+    width: 100%;
+    height: 360px;
+  }
+
+  .footer{
+    width: 600px;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .footer-logo{
+    width: 98px;
+    height: 50px;
+    margin-left: 0px;
+  }
+
+  .footer__button-main,
+  .copyright-main,
+  .student-main{
+    display: none;
+  }
+
+  .footer__button-640{
+    display: block;
+  }
+
+  .footer-logos{
+    width: 315px;
+  }
+
+  .footer-copyright-640{
+    display: flex;
+  }
+
+  .footer-background-img{
+    top: -412px;
+  }
+}
+
+/* -------------------MEDIA------------------------
+---------------------------------------------------
+---------------------320-640-------------------- */
+
+@media (min-width: 320px) and (max-width: 640px) {
+
+  /* -------------------------------------------
+  --------------------HEADER--------------------
+  ------------------------------------------- */
+
+  .header__wrapper{
+    width: 100%;
+  }
+
+  .header{
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header-logo{
+    margin-left: 10px;
+  }
+
+  .header__nav{
+    display: none;
+  }
+
+  .header-burger{
+    display: block;
+  }
+
+  /* -------------------------------------------
+  ---------------------MAP----------------------
+  ------------------------------------------- */
+
+  .map__wrapper{
+    width: 100%;
+    height: 800px;
+    position: relative;
+  }
+
+  .map__animals,
+  .map__list{
+    width: 933px;
+    height: 600px;
+  }
+
+  .map-card-tooltip{
+    width: 178px;
+    height: 100px;
+  }
+
+  .map-card-tooltip-link{
+    display: block;
+  }
+  
+  .eagle-nav{
+    top: 340px;
+    left: 60px;
+  }
+  
+  .tooltip-eagle{
+    background-image: url(../assets/tooltip-eagle-640.png);
+  }
+  
+  .alligator-nav{
+    top: 315px;
+    left: 250px;
+  }
+  
+  .tooltip-alligator{
+    background-image: url(../assets/tooltip-alligator-640.png);
+  }
+  
+  .gorilla-nav{
+    top: 395px;
+    left: 525px;
+  }
+
+  .tooltip-gorilla{
+    background-image: url(../assets/tooltip-gorilla-640.png);
+  }
+  
+  .panda-nav{
+    top: 305px;
+    left: 745px;
+  }
+  
+  .tooltip-panda{
+    background-image: url(../assets/tooltip-panda-640.png);
+  }
+  
+  .usa-nav{
+    top: 300px;
+    left: 165px;
+  }
+  
+  .eastern-drc-nav{
+    top: 425px;
+    left: 390px;
+  }
+  
+  .china-nav{
+    top: 315px;
+    left: 655px;
+  }
+
+  /* -------------------------------------------
+  --------------------FOOTER--------------------
+  ------------------------------------------- */
+
+  .footer__wrapper{
+    width: 100%;
+    height: 740px;
+  }
+
+  .footer{
+    width: 300px;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .footer-logo{
+    width: 98px;
+    height: 50px;
+    margin-top: 80px;
+  }
+
+  .footer-top,
+  .footer-bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .footer-top{
+    height: 500px;
+    margin-top: 0px;
+  }
+
+  .footer-bottom{
+    height: 50px;
+    margin-top: 50px;
+  }
+
+  .footer-bottom{
+    align-items: flex-end;
+  }
+
+  .footer__button-main{
+    display: none;
+  }
+
+  .footer__button-320{
+    display: block;
+  }
+
+  .footer__about-map,
+  .footer__contact-us-feedback{
+    width: 100%;
+    height: 57px;
+    align-items: center;
+  }
+
+  .footer__about-map{
+    margin-top: 50px;
+  }
+  
+  .footer__contact-us-feedback{
+    margin-top: 15px;
+  }
+
+  .footer__media{
+    margin-top: 50px;
+  }
+
+  .copyright-main,
+  .student-main{
+    display: none;
+  }
+
+  .student-bonus{
+    margin-bottom: 10px;
+  }
+
+  .student-bonus,
+  .copyright-bonus{
+    display: block;
+  }
+
+  .footer-copyright-320{
+    display: block;
+  }
+
+  .footer-background-img{
+    top: -785px;
+  }
+}

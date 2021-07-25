@@ -1,0 +1,57 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.eror{
+  width: 530px;
+  height: 515px;
+  background-image: url(../assets/eror404.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.eror-link{
+  width: 214px;
+  height: 16px;
+  background-image: url(../assets/eror404-link.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+@media (min-width: 640px) and (max-width: 1200px) {
+
+  .eror{
+    width: 440px;
+    height: 430px;
+  }
+
+  .eror-link{
+    height: 14px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+
+  .eror{
+    width: 260px;
+    height: 255px;
+  }
+
+  .eror-link{
+    height: 8px;
+  }
+}

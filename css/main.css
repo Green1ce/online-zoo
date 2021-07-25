@@ -1,0 +1,1769 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-style: 400;
+  color: #000000;
+}
+
+.wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* -------------------------------------------
+--------------------HEADER--------------------
+------------------------------------------- */
+
+.header-main__wrapper{
+  width: 1920px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: radial-gradient(71.89% 152.21% at 40.1% 50%, #B5E6FF 0%, #59C3FB 100%);
+}
+
+.header{
+  width: 1160px;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 5;
+}
+
+.header-logo{
+  width: 112px;
+  height: 57px;
+  background-image: url(../assets/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.header__nav{
+  width: 410px;
+  height: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin-left: 55px;
+}
+
+.header-burger{
+  width: 40px;
+  height: 40px;
+  display: none;
+  background-image: url(../assets/burger-logo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.header__link{
+  font-size: 18px;
+  line-height: 120%;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.about{
+  text-shadow: #70cb0e 0 0 2px;
+  cursor: default;
+}
+
+/* -------------------------------------------
+---------------------MAIN---------------------
+------------------------------------------- */
+
+.main{
+  width: 1160px;
+  height: 620px;
+  z-index: 5;
+}
+
+.main__header{
+  width: 570px;
+  height: 250px;
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  cursor: default;
+  margin-top: 130px;
+}
+
+.main__button{
+  width: 235px;
+  height: 50px;
+  font-size: 18px;
+  line-height: 120%;
+  font-weight: 400;
+  background: #70cb0e;
+  border: none;
+  border-radius: 30px;
+  background-image: url(../assets/for-play.svg);
+  background-repeat: no-repeat;
+  background-position: 90px center;
+  outline: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.main__button-link{
+  width: 235px;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.h1{
+  font-size: 0px;
+  opacity: 0;
+}
+
+.panda-img{
+  width: 1920px;
+  height: 700px;
+  position: absolute;
+  background-image: url(../assets/panda-main.svg);
+  background-repeat: no-repeat;
+  background-position: 870px 95px;
+  z-index: 1;
+}
+
+.drops-1,
+.drops-2{
+  width: 1920px;
+  height: 700px;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.drops-1{
+  background-image: url(../assets/drops1.svg);
+  background-position: 805px 30px;
+  z-index: 2;
+}
+
+.drops-2{
+  background-image: url(../assets/drops2.svg);
+  background-position: 220px 0;
+  z-index: 0;
+}
+
+/* -------------------------------------------
+------------------HOW-IT-WORK-----------------
+------------------------------------------- */
+
+.how-it-work__wrapper{
+  width: 1920px;
+  height: 980px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-it-work__header{
+  font-size: 40px;
+  line-height: 120%;
+  font-weight: 500;
+  cursor: default;
+  margin-top: 100px;
+}
+
+.how-it-work__carousel{
+  width: 1370px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.how-it-work__carousel__list{
+  width: 1370px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  perspective: 300px;
+  z-index: 3;
+}
+
+.carousel__item{
+  width: 350px;
+  height: 450px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #ffffff;
+  transition: all 0.3s ease-in;
+}
+
+.carousel__item:nth-child(1){
+  background-image: url(../assets/how-it-work-eagle.png);
+}
+
+.carousel__item:nth-child(2){
+  background-image: url(../assets/how-it-work-tiger.png);
+}
+
+.carousel__item:nth-child(3){
+  background-image: url(../assets/how-it-work-panda.png);
+}
+
+.carousel__item:nth-child(4){
+  background-image: url(../assets/how-it-work-monkey.png);
+}
+
+.carousel__item:nth-child(5){
+  background-image: url(../assets/how-it-work-elephant.png);
+}
+
+.carousel__item[data-pos="0"]{
+  width: 350px;
+  height: 450px;
+  z-index: 5;
+}
+
+.carousel__item[data-pos="-1"],
+.carousel__item[data-pos="1"]{
+  width: 300px;
+  height: 400px;
+  z-index: 4;
+}
+
+.carousel__item[data-pos="-1"]{
+  transform: translateX(-305px);
+}
+
+.carousel__item[data-pos="1"]{
+  transform: translateX(305px);
+}
+
+.carousel__item[data-pos="-2"],
+.carousel__item[data-pos="2"]{
+  width: 250px;
+  height: 350px;
+  z-index: 3;
+}
+
+.carousel__item[data-pos="-2"]{
+  transform: translateX(-560px);
+}
+
+.carousel__item[data-pos="2"]{
+  transform: translateX(560px);
+}
+
+.how-it-work__vector{
+  width: 1370px;
+  height: 550px;
+  position: absolute;
+  background-image: url(../assets/vector.svg);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.vector-one{
+  background-position: bottom left;
+}
+
+.vector-two{
+  background-position: top right;
+}
+
+.how-it-work__content{
+  width: 933px;
+  height: 126px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+  cursor: default;
+  margin-top: 30px;
+}
+
+.how-it-work__content-span{
+  display: block;
+}
+
+.how-it-work__link{
+  color: #267bde;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* -------------------------------------------
+------------------PETS-IN-ZOO-----------------
+------------------------------------------- */
+
+.pets-in-zoo__wrapper{
+  width: 1920px;
+  height: 1060px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pets-in-zoo__header{
+  font-size: 40px;
+  line-height: 120%;
+  font-weight: 500;
+  cursor: default;
+  margin-top: 100px;
+}
+
+/* -------------------------------------------
+--------------------SLIDER--------------------
+------------------------------------------- */
+
+.pets-in-zoo__slider{
+  width: 1160px;
+  height: 630px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.slider__arrow{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #ffe68e;
+  background-image: url(../assets/arrow-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.pets-in-zoo__bonus-arrow-wrapper{
+  width: 150px;
+  height: 64px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.right{
+  transform: rotate(180deg);
+}
+
+.slider__arrow:hover{
+  border: 3px solid #000000;
+  cursor: pointer;
+}
+
+.pets-in-zoo__animals{
+  width: 992px;
+  height: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card{
+  width: 233px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.card:hover{
+  animation-direction: linear;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+@keyframes cardOn{
+  100%{
+    transform: scale(1.1);
+  }
+}
+
+.Panda{
+  background-image: url(../assets/Panda.png);
+}
+
+.Alligator{
+  background-image: url(../assets/Alligator.png);
+}
+
+.Gorilla{
+  background-image: url(../assets/Gorilla.png);
+}
+
+.Elephant{
+  background-image: url(../assets/Elephant.png);
+}
+
+.Polar-bear{
+  background-image: url(../assets/Polar-bear.png);
+}
+
+.Bald-eagle{
+  background-image: url(../assets/Bald-eagle.png);
+}
+
+.Arctic-snowy-owl{
+  background-image: url(../assets/Arctic-snowy-owl.png);
+}
+
+.Penguin{
+  background-image: url(../assets/Penguin.png);
+}
+
+.pets-in-zoo__button{
+  width: 285px;
+  height: 50px;
+  background: #70cb0e;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.pets-in-zoo__button-link{
+  width: 285px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* -------------------------------------------
+------------------PAY-AND-FEED----------------
+------------------------------------------- */
+
+.pay-and-feed__wrapper{
+  width: 1920px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pay-and-feed__header{
+  font-size: 40px;
+  line-height: 120%;
+  font-weight: 500;
+  cursor: default;
+  margin-top: 100px;
+}
+
+.pay-and-feed__instruction{
+  width: 1050px;
+  height: 275px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../assets/pay-arrows.svg);
+  background-repeat: no-repeat;
+  background-position: 220px -190px;
+  margin-top: 80px;
+}
+
+.pay-and-feed-step{
+  width: 320px;
+  height: 275px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.step-one{
+  background-image: url(../assets/pay-step-one.svg);
+}
+
+.step-two{
+  background-image: url(../assets/pay-step-two.svg);
+}
+
+.step-three{
+  background-image: url(../assets/pay-step-three.svg);
+}
+
+/* -------------------------------------------
+-----------------TESTIMONIALS-----------------
+------------------------------------------- */
+
+.testimonials__wrapper{
+  width: 1920px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials__header{
+  font-size: 40px;
+  line-height: 120%;
+  font-weight: 500;
+  cursor: default;
+  margin-top: 100px;
+}
+
+/* -------------------------------------------
+--------------TESTIMONIALS-SLIDER-------------
+------------------------------------------- */
+
+.testimonials__slider{
+  width: 1160px;
+  height: 370px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.testimonial-card{
+  width: 233px;
+  height: 100%;
+  background: #a7e1ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+}
+
+.testimonial-card__name{
+  width: 193px;
+  height: 52px;
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 62px;
+  margin-top: 20px;
+}
+
+.testimonials__bonus-arrow-wrapper{
+  width: 150px;
+  height: 64px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.testimonial-card__donat{
+  height: 14px;
+  font-size: 12px;
+  line-height: 120%;
+  font-weight: 500;
+  background-image: url(../assets/money.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 15px;
+}
+
+.testimonial-card__content{
+  width: 193px;
+  font-size: 16px;
+  line-height: 120%;
+  margin-top: 15px;
+}
+
+.Karen-Maitland{
+  background-image: url(../assets/Karen-Maitland.png);
+}
+
+.Sara-Jones{
+  background-image: url(../assets/Sara-Jones.png);
+}
+
+.Alex-Barden{
+  background-image: url(../assets/Alex-Barden.png);
+}
+
+.Alene-Ray{
+  background-image: url(../assets/Alene-Ray.png);
+}
+
+.testimonials__button{
+  width: 245px;
+  height: 50px;
+  background: #70cb0e;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+/* -------------------------------------------
+--------------------FOOTER--------------------
+------------------------------------------- */
+
+.footer__wrapper{
+  width: 1920px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #dff5b0;
+  margin-top: 50px;
+}
+
+.footer{
+  width: 1160px;
+  height: 100%;
+  z-index: 1;
+}
+
+.footer-logo{
+  width: 112px;
+  height: 57px;
+  background-image: url(../assets/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.footer-top,
+.footer-bottom{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 65px;
+}
+
+.footer-bottom{
+  align-items: flex-end;
+}
+
+.footer__button-main{
+  width: 230px;
+  height: 50px;
+  display: block;
+  background: #70cb0e;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.footer__button-640{
+  width: 205px;
+  height: 50px;
+  display: none;
+  background: #70cb0e;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.footer__button-320{
+  width: 205px;
+  height: 50px;
+  display: none;
+  background: #70cb0e;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.footer__about-map,
+.footer__contact-us-feedback{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  list-style-type: none;
+}
+
+.footer__media{
+  width: 190px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.footer__link{
+  font-size: 18px;
+  line-height: 120%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.instagram,
+.facebook,
+.twitter,
+.youtube{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.instagram{
+  background-image: url(../assets/instagram.svg);
+}
+
+.facebook{
+  background-image: url(../assets/facebook.svg);
+}
+
+.twitter{
+  background-image: url(../assets/twitter.svg);
+}
+
+.youtube{
+  background-image: url(../assets/youtube.svg);
+}
+
+.footer-logos{
+  width: 295px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.rss-logo{
+  display: flex;
+  width: 141px;
+  height: 50px;
+  background-image: url(../assets/rss-logo.svg);
+}
+
+.yd-logo{
+  display: flex;
+  width: 97px;
+  height: 50px;
+  background-image: url(../assets/yd-logo.svg);
+}
+
+.copyright-main,
+.student-main,
+.copyright-bonus,
+.student-bonus{
+  font-size: 18px;
+  line-height: 120%;
+  cursor: default;
+  display: inline;
+}
+
+.footer-copyright-640{
+  width: 100%;
+  height: 50px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.footer-copyright-320{
+  width: 100%;
+  height: 73px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-background-img{
+  width: 1920px;
+  height: 330px;
+  position: relative;
+  top: -312px;
+  z-index: 0;
+}
+
+/* ------------------------------------------------
+---------------------WINDOWS-----------------------
+------------------------------------------------ */
+
+/* -----------donate-for-volunteers----------------
+---------------------------------------------------
+---------------------first---------------------- */
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+  -webkit-appearance: none;  
+}
+
+.donate-for-volunteers__wrapper{
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.donate-for-volunteers-blur{
+  width: 100%;
+  height: 100%;
+  background: rgba(102, 102, 102, 0.5);
+  z-index: 3;
+}
+
+.donate-for-volunteers-first{
+  width: 630px;
+  height: 340px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 5;
+}
+
+.donate-for-volunteers__close{
+  width: 27px;
+  height: 27px;
+  background-image: url(../assets/close.svg);
+  background-position: center center;
+  align-self: flex-end;
+  cursor: pointer;
+  margin: 15px 15px 0 0;
+}
+
+.donate-for-volunteers__select{
+  width: 470px;
+  height: 40px;
+  background-color: #dff5b0;
+  border: 1px solid #9ca498;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 15px;
+  padding-left: 10px;
+}
+
+.donate-for-volunteers__inputs{
+  width: 470px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.donate-for-volunteers__amount{
+  width: 300px;
+  height: 40px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.donate-for-volunteers__usd{
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #9ca498;
+  background-color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  padding-left: 60px;
+}
+
+.donate-for-volunteers__text{
+  width: 470px;
+  height: 90px;
+  display: block;
+  border: 1px solid #9ca498;
+  outline: none;
+  resize: none;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+
+.donate-for-volunteers__button-next{
+  width: 150px;
+  height: 40px;
+  background: #70cb0e;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* -----------donate-for-volunteers----------------
+---------------------------------------------------
+---------------------second---------------------- */
+
+.donate-for-volunteers-second{
+  width: 630px;
+  height: 380px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 5;
+}
+
+.donate-for-volunteers__card-one{
+  width: 360px;
+  height: 205px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: flex-start;
+  background-color: #dcdcdc;
+  border-radius: 10px;
+  margin: 50px 0 0 50px;
+  z-index: 2;
+}
+
+.donate-for-volunteers__card-number,
+.donate-for-volunteers__card-name{
+  width: 305px;
+  height: 40px;
+  border: 1px solid #9ca498;
+  outline: none;
+  resize: none;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.donate-for-volunteers__card-name{
+  margin-top: 10px;
+}
+
+.donate-for-volunteers__card-date{
+  width: 305px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-top: 10px;
+}
+
+.donate-for-volunteers__card-month,
+.donate-for-volunteers__card-year{
+  width: 80px;
+  height: 40px;
+  border: 1px solid #9ca498;
+  outline: none;
+  resize: none;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.donate-for-volunteers__card-two{
+  width: 330px;
+  height: 190px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: flex-start;
+  background-color: #c5c5c5;
+  border-radius: 10px;
+  margin: 100px 0 0 255px;
+  z-index: 1;
+}
+
+.card-two__gray-line{
+  width: 100%;
+  height: 35px;
+  background-color: #a8a8a8;
+  margin-top: 30px;
+}
+
+.card-two__cvc__wrapper{
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.card-two__cvc-lines{
+  width: 100%;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1;
+}
+
+.card-two__cvc-line{
+  width: 100%;
+  height: 5px;
+  display: block;
+  background-color: #a8a8a8;
+}
+
+.card-two__cvc{
+  width: 75px;
+  height: 35px;
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #9ca498;
+  text-align: center;
+  outline: none;
+  z-index: 2;
+  margin-right: 35px;
+}
+
+
+.donate-for-volunteers__button-donate{
+  width: 170px;
+  height: 40px;
+  position: absolute;
+  background: #70cb0e;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 310px;
+}
+
+
+/* -------------------MEDIA------------------------
+---------------------------------------------------
+---------------------1200-1920------------------ */
+
+@media (min-width: 1200px) and (max-width: 1920px) {
+
+  .how-it-work__wrapper,
+  .pets-in-zoo__wrapper,
+  .pay-and-feed__wrapper,
+  .testimonials__wrapper{
+    width: 1200px;
+  }
+
+  .how-it-work__carousel,
+  .testimonials__slider{
+    width: 1160px;
+  }
+
+  .carousel__item[data-pos="-1"]{
+    transform: translateX(-255px);
+  }
+  
+  .carousel__item[data-pos="1"]{
+    transform: translateX(255px);
+  }
+  
+  .carousel__item[data-pos="-2"]{
+    transform: translateX(-455px);
+  }
+  
+  .carousel__item[data-pos="2"]{
+    transform: translateX(455px);
+  }
+
+  .footer__wrapper{
+    width: 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 700px) {
+
+  .panda-img{
+    width: 100%;
+    position: absolute;
+    background-position: 80px 95px;
+  }
+
+}
+
+@media (min-width: 700px) and (max-width: 1200px) {
+
+  .panda-img{
+    width: 100%;
+    background-position: right 95px;
+    margin-left: 120px;
+  }
+}
+
+/* -------------------MEDIA------------------------
+---------------------------------------------------
+---------------------640-1200------------------- */
+
+@media (min-width: 640px) and (max-width: 1200px) {
+
+  /* -------------------------------------------
+  --------------------HEADER--------------------
+  ------------------------------------------- */
+
+  .header-main__wrapper{
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .header{
+    width: 100%;
+    margin: 0 0 0 20px;
+  }
+
+  /* -------------------------------------------
+  ---------------------MAIN---------------------
+  ------------------------------------------- */
+
+  .main{
+    width: 100%;
+  }
+
+  .main__header{
+    width: 415px;
+    height: 180px;
+    font-size: 50px;
+    margin: 70px 0 0 20px;
+  }
+
+  .main__button{
+    width: 185px;
+    background-position: 65px center;
+    margin: 50px 0 0 20px;
+  }
+
+  .main__button-link{
+    width: 185px;
+  }
+
+  .drops-1{
+    background-position: -540px -350px;
+  }
+
+  .drops-2{
+    background-position: -550px -70px;
+  }
+
+  /* -------------------------------------------
+  ------------------HOW-IT-WORK-----------------
+  ------------------------------------------- */
+
+  .how-it-work__wrapper{
+    width: 100%;
+    height: 1070px;
+  }
+
+  .carousel__item[data-pos="-1"]{
+    transform: translateX(-255px);
+  }
+  
+  .carousel__item[data-pos="1"]{
+    transform: translateX(255px);
+  }
+  
+  .carousel__item[data-pos="-2"]{
+    transform: translateX(-455px);
+  }
+  
+  .carousel__item[data-pos="2"]{
+    transform: translateX(455px);
+  }
+
+  .how-it-work__content{
+    width: 536px;
+    height: 210px;
+  }
+
+  .how-it-work__content-span{
+    display: inline;
+  }
+
+  /* -------------------------------------------
+  ------------------PETS-IN-ZOO-----------------
+  ------------------------------------------- */
+
+  .pets-in-zoo__wrapper{
+    width: 100%;
+    height: 1160px;
+  }
+
+  /* -------------------------------------------
+  --------------------SLIDER--------------------
+  ------------------------------------------- */
+
+  .pets-in-zoo__slider{
+    width: 600px;
+  }
+
+  .main-arrow{
+    display: none;
+  }
+
+  .pets-in-zoo__bonus-arrow-wrapper{
+    display: flex;
+  }
+
+  .pets-in-zoo__animals{
+    width: 100%;
+  }
+
+  .card{
+    width: 187px;
+  }
+
+  .Elephant,
+  .Penguin{
+    display: none;
+  }
+
+  /* -------------------------------------------
+  ------------------PAY-AND-FEED----------------
+  ------------------------------------------- */
+
+  .pay-and-feed__wrapper{
+    width: 640px;
+    height: 930px;
+  }
+
+  .pay-and-feed__instruction{
+    width: 640px;
+    height: 605px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url(../assets/pay-arrows-640.svg);
+    background-position: 110px -90px;
+  }
+
+  .pay-and-feed-step{
+    width: 315px;
+    height: 295px;
+  }
+
+  /* -------------------------------------------
+  -----------------TESTIMONIALS-----------------
+  ------------------------------------------- */
+
+  .testimonials__wrapper{
+    width: 100%;
+    height: 950px;
+  }
+
+  /* -------------------------------------------
+  --------------TESTIMONIALS-SLIDER-------------
+  ------------------------------------------- */
+
+  .testimonials__slider{
+    width: 600px;
+    height: 430px;
+  }
+
+  .testimonial-card{
+    width: 187px;
+  }
+
+  .testimonial-card-four{
+    display: none;
+  }
+
+  .testimonial-card__name,
+  .testimonial-card__content{
+    width: 147px;
+  }
+
+  .testimonials__bonus-arrow-wrapper{
+    display: flex;
+  }
+
+  .testimonials__button{
+    width: 225px;
+  }
+
+  /* -------------------------------------------
+  --------------------FOOTER--------------------
+  ------------------------------------------- */
+
+  .footer__wrapper{
+    width: 100%;
+    height: 360px;
+  }
+
+  .footer{
+    width: 600px;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .footer-logo{
+    width: 98px;
+    height: 50px;
+    margin-left: 0px;
+  }
+
+  .footer__button-main{
+    display: none;
+  }
+
+  .footer__button-640{
+    display: block;
+  }
+
+  .footer-logos{
+    width: 315px;
+  }
+
+  .copyright-main,
+  .student-main{
+    display: none;
+  }
+
+  .footer-copyright-640{
+    display: flex;
+  }
+
+  .footer-background-img{
+    top: -412px;
+  }
+}
+
+/* -------------------MEDIA------------------------
+---------------------------------------------------
+---------------------320-640-------------------- */
+
+@media (min-width: 320px) and (max-width: 640px) {
+
+  /* -------------------------------------------
+  --------------------HEADER--------------------
+  ------------------------------------------- */
+
+  .header-main__wrapper{
+    width: 100%;
+  }
+
+  .header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo{
+    margin-left: 10px;
+  }
+
+  .header__nav{
+    display: none;
+  }
+
+  .header-burger{
+    display: flex;
+  }
+
+  /* -------------------------------------------
+  ---------------------MAIN---------------------
+  ------------------------------------------- */
+
+  .main{
+    width: 100%;
+  }
+
+  .main__header{
+    width: 220px;
+    height: 300px;
+    font-size: 50px;
+    margin: 70px 0 0 10px;
+  }
+
+  .main__button{
+    width: 220px;
+    margin: 50px 0 0 10px;
+    background-position: 85px center;
+  }
+
+  .main__button-link{
+    width: 220px;
+  }
+
+  .panda-img{
+    width: 700px;
+    height: 700px;
+    background-size: cover;
+    background-position: 170px 45px;
+  }
+
+  .drops-1{
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/drops320.svg);
+    background-position: 40px 100px;
+    z-index: 2;
+  }
+
+  .drops-2{
+    display: none;
+  }
+
+  /* -------------------------------------------
+  ------------------HOW-IT-WORKS----------------
+  ------------------------------------------- */
+
+  .how-it-work__wrapper{
+    width: 100%;
+    height: 1260px;
+  }
+
+  .how-it-work__animals{
+    width: 300px;
+    height: 450px;
+    display: block;
+    margin: 80px 0;
+  }
+
+  .carousel__item{
+    height: 215px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+  }
+
+  .carousel__item[data-pos="-2"]{
+    width: 140px;
+    top: 35px;
+    left: 140px;
+    z-index: 4;
+  }
+
+  .carousel__item[data-pos="-1"]{
+    width: 160px;
+    top: -215px;
+    left: 0px;
+    z-index: 3;
+  }
+
+  .carousel__item[data-pos="0"]{
+    width: 140px;
+    top: -235px;
+    left: 20px;
+    z-index: 5;
+  }
+
+  .carousel__item[data-pos="1"]{
+    width: 160px;
+    top: -415px;
+    left: 140px;
+    z-index: 3;
+  }
+
+  .carousel__item[data-pos="2"]{
+    display: none;
+  }
+
+
+  .how-it-work__vector{
+    width: 950px;
+    height: 350px;
+    position: relative;
+    background-image: url(../assets/vector.svg);
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  .vector-one{
+    background-position: bottom left;
+    top: -915px;
+    left: -50px;
+  }
+
+  .vector-two{
+    background-position: top right;
+    top: -1065px;
+    left: -540px;
+  }
+
+  .how-it-work__content{
+    width: 285px;
+    height: 400px;
+    line-height: 130%;
+    margin-top: 0px;
+  }
+
+  .how-it-work__content-span{
+    display: inline;
+  }
+
+  /* -------------------------------------------
+  ------------------PETS-IN-ZOO-----------------
+  ------------------------------------------- */
+
+  .pets-in-zoo__wrapper{
+    width: 100%;
+    height: 1160px;
+  }
+
+  /* -------------------------------------------
+  --------------------SLIDER--------------------
+  ------------------------------------------- */
+
+  .pets-in-zoo__slider{
+    width: 300px;
+  }
+
+  .main-arrow{
+    display: none;
+  }
+
+  .pets-in-zoo__bonus-arrow-wrapper{
+    display: flex;
+  }
+
+  .pets-in-zoo__animals{
+    width: 100%;
+  }
+
+  .card{
+    width: 140px;
+  }
+
+  .Panda{
+    background-position: -15px center;
+  }
+
+  .Alligator{
+    background-position: -90px center;
+  }
+
+  .Gorilla{
+    background-position: -55px center;
+  }
+
+  .Bald-eagle{
+    background-position: -65px center;
+  }
+
+  .Elephant,
+  .Penguin,
+  .Polar-bear,
+  .Arctic-snowy-owl{
+    display: none;
+  }
+
+  .pets-in-zoo__button,
+  .pets-in-zoo__button-link{
+    width: 300px;
+  }
+
+  /* -------------------------------------------
+  ------------------PAY-AND-FEED----------------
+  ------------------------------------------- */
+
+  .pay-and-feed__wrapper{
+    width: 100%;
+    height: 1370px;
+  }
+
+  .pay-and-feed__instruction{
+    width: 320px;
+    height: 1045px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../assets/pay-arrows-320.svg);
+    background-repeat: no-repeat;
+    background-position: center 300px;
+    margin-top: 80px;
+  }
+
+  .pay-and-feed-arrows{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    position: relative;
+    top: -360px;
+    background-image: url(../assets/pay-arrows-320.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  /* -------------------------------------------
+  -----------------TESTIMONIALS-----------------
+  ------------------------------------------- */
+
+  .testimonials__wrapper{
+    width: 100%;
+    height: 1060px;
+  }
+
+  /* -------------------------------------------
+  --------------TESTIMONIALS-SLIDER-------------
+  ------------------------------------------- */
+
+  .testimonials__slider{
+    width: 300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .testimonial-card{
+    width: 300px;
+    height: 290px;
+  }
+
+  .testimonial-card-three,
+  .testimonial-card-four{
+    display: none;
+  }
+
+  .testimonial-card__name,
+  .testimonial-card__content{
+    width: 260px;
+  }
+
+  .testimonials__bonus-arrow-wrapper{
+    display: flex;
+  }
+
+  .testimonials__button{
+    width: 225px;
+  }
+
+  /* -------------------------------------------
+  --------------------FOOTER--------------------
+  ------------------------------------------- */
+
+  .footer__wrapper{
+    width: 100%;
+    height: 740px;
+    margin-top: 100px;
+  }
+
+  .footer{
+    width: 300px;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .footer-logo{
+    width: 98px;
+    height: 50px;
+    margin-top: 80px;
+  }
+
+  .footer-top,
+  .footer-bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .footer-top{
+    height: 500px;
+    margin-top: 0px;
+  }
+
+  .footer-bottom{
+    height: 50px;
+    margin-top: 50px;
+  }
+
+  .footer-bottom{
+    align-items: flex-end;
+  }
+
+  .footer__button-main{
+    display: none;
+  }
+
+  .footer__button-320{
+    display: block;
+  }
+
+  .footer__about-map,
+  .footer__contact-us-feedback{
+    width: 100%;
+    height: 57px;
+    align-items: center;
+  }
+
+  .footer__about-map{
+    margin-top: 50px;
+  }
+  
+  .footer__contact-us-feedback{
+    margin-top: 15px;
+  }
+
+  .footer__media{
+    margin-top: 50px;
+  }
+
+  .copyright-main,
+  .student-main{
+    display: none;
+  }
+
+  .student-bonus{
+    margin-bottom: 10px;
+  }
+
+  .student-bonus,
+  .copyright-bonus{
+    display: block;
+  }
+
+  .footer-copyright-320{
+    display: block;
+  }
+
+  .footer-background-img{
+    top: -785px;
+  }
+}
